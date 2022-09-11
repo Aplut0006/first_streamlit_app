@@ -1,4 +1,4 @@
 
 import streamlit
 
-streamlit.title('my name is Aplut')
+streamlit.title('My name is Aplut')
