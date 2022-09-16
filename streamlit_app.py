@@ -1,7 +1,6 @@
 import streamlit
 import pandas
 import requests
-import snowflake.connector
 from urllib.error import URLError
 
 
@@ -49,6 +48,8 @@ except URLError as e:
 #streamlit.text(fruityvice_response.json())
 
 streamlit.stop()
+import snowflake.connector
+
 
 
 
