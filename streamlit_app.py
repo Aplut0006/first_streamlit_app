@@ -1,9 +1,7 @@
 import streamlit
 import pandas
 import requests
-import snowflake.connector
 
-from urllib.error import URLError
 
 
 streamlit.title('My name is Aplut')
@@ -33,7 +31,9 @@ def get_fruityvice_data(this_fruit_choice):
   return fruityvice_normalized
 
 
+import snowflake.connector
 
+from urllib.error import URLError
 streamlit.header("Fruityvice Fruit Advice!")
 try:
   fruit_choice = streamlit.text_input('What fruit would you like information about?')
