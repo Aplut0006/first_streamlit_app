@@ -1,6 +1,8 @@
 import streamlit
 import pandas
 import requests
+from urllib.error import URLError
+
 
 
 
@@ -31,9 +33,7 @@ def get_fruityvice_data(this_fruit_choice):
   return fruityvice_normalized
 
 
-import snowflake.connector
 
-from urllib.error import URLError
 streamlit.header("Fruityvice Fruit Advice!")
 try:
   fruit_choice = streamlit.text_input('What fruit would you like information about?')
@@ -55,6 +55,7 @@ except URLError as e:
 
 streamlit.stop()
 
+import snowflake.connector
 
 
 
