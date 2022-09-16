@@ -52,10 +52,10 @@ except URLError as e:
 
 #streamlit.text(fruityvice_response.json())
 
-
+import snowflake.connector
 streamlit.stop()
 
-import snowflake.connector
+
 
 
 
