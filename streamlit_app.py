@@ -24,10 +24,13 @@ fruits_to_show = my_fruit_list.loc[fruits_selected]
 
 streamlit.dataframe(fruits_to_show)
 
+
 def get_fruitvice_data(this_fruit_choice):
   fruityvice_response = requests.get("https://fruityvice.com/api/fruit/"+this_fruit_choice)
   fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
   return fruityvice_normalized
+
+import snowflake.connector
 
 streamlit.header("Fruityvice Fruit Advice!")
 try:
@@ -46,7 +49,7 @@ except URLError as e:
 #streamlit.write('The user entered ', fruit_choice)
 
 #streamlit.text(fruityvice_response.json())
-import snowflake.connector
+
 
 streamlit.stop()
 
