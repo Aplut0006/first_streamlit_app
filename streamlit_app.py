@@ -1,6 +1,8 @@
 import streamlit
 import pandas
 import requests
+import snowflake.connector
+
 from urllib.error import URLError
 
 
@@ -52,7 +54,7 @@ except URLError as e:
 
 #streamlit.text(fruityvice_response.json())
 
-streamlit.stop()
+#streamlit.stop()
 
 
 
@@ -60,7 +62,6 @@ streamlit.stop()
 
 
 streamlit.header("This Fruit load list contains:")
-import snowflake.connector
 
 def get_fruit_load_list():
   with my_cnx.cursor() as my_cur:
